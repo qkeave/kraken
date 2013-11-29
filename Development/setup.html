@@ -1,0 +1,279 @@
+<!-- $title Setup | Kraken -->
+<!-- @include _header -->
+
+	<!-- @include _navigation-subpages -->
+
+	<section class="space-bottom">
+		<article class="container">
+
+			<div class="row">
+				<div class="grid-two-thirds float-center">
+
+					<h1 class="text-center">Setup</h1>
+
+					<p>Kraken is <a href="http://sass-lang.com/">powered by Sass</a>, an extension of CSS that adds powerful features like variables and functions and makes customizing Kraken a lot easier. If you don't use Sass, that's ok. Kraken comes with a vanilla CSS package, too.</p>
+
+					<ul>
+						<li><a class="scroll" href="#sass">Sass</a></li>
+						<li><a class="scroll" href="#css">Vanilla CSS</a></li>
+						<li><a class="scroll" href="#html">HTML Template</a></li>
+					</ul>
+
+					<hr>
+
+
+					<h2 id="sass">Kraken with Sass</h2>
+
+					<p>Kraken includes the following files.</p>
+
+<pre>Kraken
+|--- Build (the vanilla CSS package)
+|--- css
+|    |--- components
+|    |    |--- _buttons.scss
+|    |    |--- _code.scss
+|    |    |--- _forms.scss
+|    |    |--- _grid.scss
+|    |    |--- _icons.scss
+|    |    |--- _overrides.scss
+|    |    |--- _print.scss
+|    |    |--- _reset.scss
+|    |    |--- _typography.scss
+|    |--- _config.scss
+|    |--- _mixins.scss
+|    |--- kraken.scss
+|--- fonts (placeholder for an icon font)
+|--- img (placeholder for image files)
+|--- js (placeholder for scripts)
+|--- index.html
+|--- template.html
+|--- readme.md</pre>
+
+
+				<h3>Configuring Your Settings</h3>
+
+				<p>The <code>_config.scss</code> file contains variables for all of the colors, font stacks, breakpoints, and sizing used in Kraken.</p>
+
+<pre><code class="language-scss">// Colors
+$color-primary: #0088cc;
+$color-black: #272727;
+$color-white: #ffffff;
+
+$color-success: #377f31; // Green
+$color-danger: #880e14; // Red
+$color-warning: #dba909; // Yellow
+$color-code: #dd1144;
+
+$color-gray-dark: #808080;
+$color-gray-light: #e5e5e5;
+
+
+// Font Stacks
+$font-primary: "Helvetica Neue", Arial, sans-serif;
+$font-secondary: Georgia, Times, serif;
+$font-monospace: Menlo, Monaco, "Courier New", monospace;
+
+
+// Breakpoints
+$bp-xsmall: 20em;
+$bp-small: 30em;
+$bp-medium: 40em;
+$bp-large: 60em;
+$bp-xlarge: 80em;
+
+
+// Sizing
+$font-base: 100%;
+$spacing: 1.5625em;
+$container-max: 80em;</code></pre>
+
+
+					<h3>Mixins</h3>
+
+					<p>The <code>_mixins.scss</code> file contains just a handful of mixins and functions to speed up development.</p>
+
+					<ul>
+						<li><code>prefixer</code> makes it easy to add vendor prefixes.</li>
+						<li><code>font-face</code> adds the <code>@font-face</code> property.</li>
+						<li><code>strip-unit</code> removes units (px, em, etc.) from numbers.</li>
+						<li><code>calc-em</code> converts pixels to ems.</li>
+					</ul>
+
+					<p><code>prefixer</code> and <code>font-face</code> were forked from <a href="http://bourbon.io/">Bourbon</a>, the world's best Sass library.</p>
+
+
+					<h3>Components</h3>
+
+					<p>The <code>components</code> folder contains all of the Kraken components: the grid, button and form styling, and so on. The <code>kraken.scss</code> folder imports the config file, mixins, and components for processing into a CSS file.</p>
+
+					<hr>
+
+
+					<h2 id="css">Kraken with vanilla CSS</h2>
+
+					<p>Within Kraken, the <code>Build</code> folder contains the vanilla CSS package.</p>
+
+<pre>Build
+|--- css
+|    |--- kraken.css
+|--- fonts (placeholder for an icon font)
+|--- img (placeholder for image files)
+|--- js (placeholder for scripts)
+|--- index.html
+|--- template.html
+|--- readme.md</pre>
+
+
+					<h3>Adjusting Settings</h3>
+
+					<p>
+						<strong>Page Width</strong><br>
+						The <code>.container</code> class sets the width for page content. Adjust the <code>max-width</code> property to set the maximum width of the page.
+					</p>
+
+					<p>
+						<strong>Font Stack</strong><br>
+						The <code>body</code> element sets the typeface for the entire set. By default, the font stack is Helvetica Neue, Arial, and sans-serif. The two exceptions are <code>pre</code> and <code>code</code> elements, which use a monospace stack. Adjust as desired.
+					</p>
+
+					<p>
+						<strong>Typographic Scale</strong><br>
+						Kraken uses a <a href="<!-- @path typography.html -->">typographic scale</a>. You can scale the size of all site elements proportionately by adjusting the <code>font-size</code> property on the body element, which is set to 100% by default.
+					</p>
+
+					<p>
+						<strong>Colors</strong><br>
+						Primary: #0088cc<br>
+						Black: #272727<br>
+						White: #ffffff<br>
+						Dark Gray: #808080<br>
+						Light Gray: #e5e5e5
+					</p>
+
+					<p>
+						<strong>Breakpoints</strong><br>
+						Extra Small: 20em<br>
+						Small: 30em<br>
+						Medium: 40em<br>
+						Large: 60em<br>
+						Extra Large: 80em
+					</p>
+
+					<hr>
+
+
+					<h2 id="html">HTML Template</h2>
+
+					<p>Here's a basic HTML template page to get you started.</p>
+
+					<pre><code class="language-markup">&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+
+  &lt;head&gt;
+	&lt;meta charset="utf-8"&gt;
+
+	&lt;!-- Force latest available IE rendering engine and Chrome Frame (if installed) --&gt;
+	&lt;meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"&gt;
+
+	&lt;title&gt;&lt;/title&gt;
+	&lt;meta name="description" content=""&gt;
+
+	&lt;!-- Mobile Screen Resizing --&gt;
+	&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+
+	&lt;!-- Favicon --&gt;
+	&lt;link rel="shortcut icon" type="image/ico" href="img/favicon.ico"&gt;
+
+	&lt;!-- Apple Touch Icons --&gt;
+	&lt;link rel="apple-touch-icon" href="img/apple-touch-icon.png"&gt;
+	&lt;link rel="apple-touch-icon" sizes="72x72" href="img/apple-touch-icon-72.png"&gt;
+	&lt;link rel="apple-touch-icon" sizes="114x114" href="img/apple-touch-icon-114.png"&gt;
+	&lt;link rel="apple-touch-icon" sizes="144x144" href="img/apple-touch-icon-144.png"&gt;
+
+	&lt;!-- MS Homescreen Icons --&gt;
+	&lt;meta name="msapplication-TileColor" content="#0088cc"&gt;
+	&lt;meta name="msapplication-TileImage" content="img/ms-touch-icon.png"&gt;
+
+	&lt;!-- stylesheet --&gt;
+	&lt;link rel="stylesheet" href="css/kraken.css" type="text/css"&gt;
+
+	&lt;!-- HTML5 Shim for IE 6-8 --&gt;
+	&lt;!--[if lt IE 9]&gt;
+	  &lt;script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"&gt;&lt;/script&gt;
+	&lt;![endif]--&gt;
+  &lt;/head&gt;
+
+  &lt;body&gt;
+
+	&lt;!-- Old Browser Warning --&gt;
+	&lt;!-- If you're supporting IE 6-8, remove this --&gt;
+	&lt;!--[if lt IE 9]&gt;
+		&lt;section class="container"&gt;
+			Did you know that your web browser is a bit old? Some of the content on this site might not work right as a result. &lt;a href="http://whatbrowser.org"&gt;Upgrade your browser&lt;/a&gt; for a faster, better, and safer web experience.
+		&lt;/section&gt;
+	&lt;![endif]--&gt;
+
+	&lt;section class="container"&gt;
+
+		&lt;h1&gt;Hello World!&lt;/h1&gt;
+
+		&lt;p&gt;Add your content here.&lt;/p&gt;
+
+	&lt;/section&gt;
+
+	&lt;!-- Javascript --&gt;
+	&lt;!-- In the footer for better performance --&gt;
+	&lt;script src="js/kraken.js"&gt;&lt;/script&gt;
+
+	&lt;!-- Google Analytics: change UA-XXXXX-X to be your site's ID. --&gt;
+	&lt;!-- (Via HTML5 Boilerplate: http://html5boilerplate.com/) --&gt;
+	&lt;script&gt;
+		var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
+		(function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+		g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+		s.parentNode.insertBefore(g,s)}(document,'script'));
+	&lt;/script&gt;
+
+  &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+
+					<h3 class="text-center">The Template Explained</h3>
+
+					<p><strong>HTML Language</strong><br>
+					The language attribute (<code>lang</code>) helps screen-readers and translation software read your site (<a href="http://www.youtube.com/watch?v=Rx7lE8j5MNA">learn more</a>). Be default, it's set to English. Change it as needed for <a href="http://www.w3.org/International/questions/qa-choosing-language-tags">your local language</a>.</p>
+
+					<p><strong>Chrome Frame</strong><br>
+					Sometimes newer versions of IE will use not-so-new versions of their rendering engine. We tell IE to use the latest available version of it's rendering engine, or Chrome Frame if it's installed.</p>
+
+					<p><strong>Mobile Screen Resizing</strong><br>
+					Modern mobile browsers often "fake" a desktop sized viewport so that websites that aren't mobile-optimized aren't weirdly zoomed in when you load them. The viewport tag tells browsers that the viewport should be the size of the screen (because our site <em>is</em> mobile-optimize).</p>
+
+					<p><strong>Icons</strong><br>
+					The site favicon and touch icons for when people bookmark your site or app on the homescreen of their mobile device. This now includes support for Windows phones, too. (Icons aren't included with Kraken. Add them to <code>img</code> folder.)</p>
+
+					<p><strong>HTML5 Shim</strong><br>
+					Internet Explorer 8 and lower do not recognize the new HTML5 semantic elements (like <code>&lt;header&gt;</code>, <code>&lt;section&gt;</code>, and so on). The HTML5 Shim is a little JavaScript snippet that we load conditionally on older IE browsers to ensure those elements render correctly.</p>
+
+					<p><strong>Old Browser Warning</strong><br>
+					A friendly message encouraging visitors on older versions of IE to upgrade their browser. They can still access the site content. It will just look a bit funny.</p>
+
+					<p><strong>JavaScript in the Footer</strong><br>
+					For faster loading and better site performance, JavaScript files are included in the footer, not the header.</p>
+
+					<p><strong>Google Analytics</strong><br>
+					An optimized version of Google Analytics is preloaded for you. Just add your site's ID (or replace the code altogether if you're using another analytics platform). <a href="http://html5boilerplate.com/">Adapted from HTML5 Boilerplate.</a></p>
+
+				</div>
+			</div>
+
+			<hr>
+
+
+			<!-- @include _getting-started -->
+
+
+		</article>
+	</section>
+
+<!-- @include _footer -->

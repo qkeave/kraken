@@ -1,0 +1,72 @@
+<!-- $title Typography | Kraken -->
+<!-- @include _header -->
+
+	<!-- @include _navigation-subpages -->
+
+	<section class="space-bottom">
+		<article class="container">
+
+			<div class="row">
+				<div class="grid-two-thirds float-center">
+
+					<h1 class="text-center">Typography</h1>
+
+					<p>Kraken uses relative sizing (ems and %, not pixels) for everything.</p>
+
+					<p>The <code>body</code> has a base <code>font-size</code> of 100%, which is 16px on browsers with default font settings. All other sizes are in ems. Changing the <code>font-size</code> on the <code>body</code> element will adjust the typographical scale for the entire site.</p>
+
+					<div class="hero hero-condensed"><span class="label">Psstt...</span> New to relative sizing? <a href="http://gomakethings.com/working-with-relative-sizing/">Learn more.</a></div>
+
+					<p>The <code>font-family</code> on the <code>body</code> is <code>"Helvetica Neue", Arial, sans-serif</code>. This sets the typeface for the entire site. Adjust as needed.</p>
+
+
+					<h2 class="text-center">Text Basics</h2>
+
+					<p>
+						Default text.<br>
+						<span class="text-muted">Muted text.</span><br>
+						<span class="text-small">Small text.</span><br>
+						<span class="text-tall">Tall text.</span><br>
+						<a href="#">Hyperlinks.</a><br>
+						<strong>Bold</strong> and <em>italics</em>.
+					</p>
+
+					<pre><code class="language-markup">Default text.
+&lt;span class="text-muted"&gt;Muted text.&lt;/span&gt;
+&lt;span class="text-small"&gt;Small text.&lt;/span&gt;
+&lt;span class="text-tall"&gt;Tall text.&lt;/span&gt;
+&lt;a href="#"&gt;Hyperlinks.&lt;/a&gt;
+&lt;strong&gt;Bold&lt;/strong&gt; and &lt;em&gt;italics&lt;/em&gt;.</code></pre>
+
+					<p><span class="label">Heads up...</span> Because Kraken uses relative sizing, you should always apply <code>.text-tall</code> and <code>.text-small</code> classes to a <code>&lt;span&gt;</code> element and not directly to a <code>&lt;p&gt;</code>. Otherwise, your spacing will get all messed up.</p>
+
+					<div class="row">
+						<div class="grid-half">
+							<strong>This</strong>
+							<pre><code class="language-markup">&lt;p&gt;
+	&lt;span class="text-small"&gt;
+		Small text.
+	&lt;/span&gt;
+&lt;/p&gt;</code></pre>
+						</div>
+						<div class="grid-half">
+							<strong>Not This</strong>
+							<pre><code class="language-markup">&lt;p class="text-small"&gt;
+	Small text.
+&lt;/p&gt;</code></pre>
+						</div>
+					</div>
+
+				</div>
+			</div>
+
+			<hr>
+
+
+			<!-- @include _getting-started -->
+
+
+		</article>
+	</section>
+
+<!-- @include _footer -->
