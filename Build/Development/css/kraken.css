@@ -777,19 +777,19 @@ table {
 th,
 td {
   text-align: left;
-  padding: 0.5em;
-  border-top: 0.0725em solid #b8b8b8; }
+  padding: 0.5em; }
 
 th {
+  background-color: #f2f2f2;
   font-weight: bold;
   vertical-align: bottom; }
 
 td {
+  border-top: 0.0725em solid #ededed;
   vertical-align: top; }
 
-thead:first-child th,
-thead:first-child td {
-  border: none; }
+tbody tr:nth-child(even) {
+  background-color: #f7f7f7; }
 
 .table-condensed th,
 .table-condensed td {
