@@ -72,7 +72,7 @@ time, mark, audio, video {
   margin: 0;
   padding: 0;
   border: 0;
-  font-family: "Open Sans", "Helvetica Neue", Arial, sans-serif;
+  font-family: "Helvetica Neue", Arial, sans-serif;
   font-size: 100%;
   font: inherit;
   vertical-align: baseline; }
@@ -262,7 +262,7 @@ a:active {
 	Sets font styles for entire site.
  * ============================================================= */
 body {
-  font-family: "Open Sans", "Helvetica Neue", Arial, sans-serif;
+  font-family: "Helvetica Neue", Arial, sans-serif;
   font-size: 100%;
   line-height: 1.5;
   color: #272727;
@@ -716,8 +716,8 @@ select:focus {
   font-family: "icomoon";
   font-weight: normal;
   font-style: normal;
-  src: url(../fonts/icomoon.eot);
-  src: url(../fonts/icomoon.eot?#iefix) format("embedded-opentype"), url(../fonts/icomoon.woff) format("woff"), url(../fonts/icomoon.ttf) format("truetype"), url(../fonts/icomoon.svg#icomoon) format("svg"); }
+  src: url(../../fonts/icomoon.eot);
+  src: url(../../fonts/icomoon.eot?#iefix) format("embedded-opentype"), url(../../fonts/icomoon.woff) format("woff"), url(../../fonts/icomoon.ttf) format("truetype"), url(../../fonts/icomoon.svg#icomoon) format("svg"); }
 
 [class^="icon-"]:before,
 [class*=" icon-"]:before {
