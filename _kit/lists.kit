@@ -1,0 +1,89 @@
+<!-- $title = Lists | Kraken -->
+<!-- @include _includes/_header.kit -->
+
+	<!-- @include _includes/_navigation-subpages.kit -->
+
+	<section class="space-bottom">
+		<article class="container">
+
+			<div class="row">
+				<div class="grid-two-thirds float-center">
+
+					<h1 class="text-center">Lists</h1>
+
+					<p>Kraken includes styling for ordered, unordered, unstyled, and definition lists.</p>
+
+					<div class="row">
+						<div class="grid-third">
+							<strong>Ordered</strong>
+							<ol>
+								<li>Item 1</li>
+								<li>Item 2</li>
+								<li>Item 3</li>
+							</ol>
+						</div>
+						<div class="grid-third">
+							<strong>Unordered</strong>
+							<ul>
+								<li>Item 1</li>
+								<li>Item 2</li>
+								<li>Item 3</li>
+							</ul>
+						</div>
+						<div class="grid-third">
+							<strong>Unstyled</strong>
+							<ul class="list-unstyled">
+								<li>Item 1</li>
+								<li>Item 2</li>
+								<li>Item 3</li>
+							</ul>
+						</div>
+					</div>
+
+					<dl>
+						<dt>Definition List</dt>
+						<dd>Encloses a list of pairs of terms and descriptions. Common uses for this element are to implement a glossary or to display metadata (a list of key-value pairs).</dd>
+					</dl>
+
+					<pre><code class="language-markup">Ordered
+&lt;ol&gt;
+	&lt;li&gt;Item 1&lt;/li&gt;
+	&lt;li&gt;Item 2&lt;/li&gt;
+	&lt;li&gt;Item 3&lt;/li&gt;
+&lt;/ol&gt;
+
+Unordered
+&lt;ul&gt;
+	&lt;li&gt;Item 1&lt;/li&gt;
+	&lt;li&gt;Item 2&lt;/li&gt;
+	&lt;li&gt;Item 3&lt;/li&gt;
+&lt;/ul&gt;
+
+Unstyled
+&lt;ul class="list-unstyled"&gt;
+	&lt;li&gt;Item 1&lt;/li&gt;
+	&lt;li&gt;Item 2&lt;/li&gt;
+	&lt;li&gt;Item 3&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;dl&gt;
+	&lt;dt&gt;Definition List&lt;/dt&gt;
+	&lt;dd&gt;Encloses a list of pairs of terms and descriptions. Common uses for this element are to implement a glossary or to display metadata (a list of key-value pairs).&lt;/dd&gt;
+&lt;/dl&gt;</code></pre>
+
+
+					<p><span class="label">Keep in mind...</span> For semantic reasons, <code>.list-unstyled</code> should only be applied to unordered lists.</p>
+
+				</div>
+			</div>
+
+			<hr>
+
+
+			<!-- @include _includes/_getting-started.kit -->
+
+
+		</article>
+	</section>
+
+<!-- @include _includes/_footer.kit -->
