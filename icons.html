@@ -3,7 +3,7 @@
 
 	<head>
 		<meta charset="utf-8">
-		<title>Lists | Kraken</title>
+		<title>Icons | Kraken</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 		<!-- Favicon -->
@@ -43,70 +43,30 @@
 			<div class="row">
 				<div class="grid-two-thirds float-center">
 
-					<h1 class="text-center">Lists</h1>
+					<h1>Icons</h1>
 
-					<p>Kraken includes styling for ordered, unordered, unstyled, and definition lists.</p>
+					<p>Kraken includes a lightweight feature test for <code>@font-face</code> and pseudo selector support. The Sass version also includes a placeholder file for working with icon fonts.</p>
 
-					<div class="row">
-						<div class="grid-third">
-							<strong>Ordered</strong>
-							<ol>
-								<li>Item 1</li>
-								<li>Item 2</li>
-								<li>Item 3</li>
-							</ol>
-						</div>
-						<div class="grid-third">
-							<strong>Unordered</strong>
-							<ul>
-								<li>Item 1</li>
-								<li>Item 2</li>
-								<li>Item 3</li>
-							</ul>
-						</div>
-						<div class="grid-third">
-							<strong>Unstyled</strong>
-							<ul class="list-unstyled">
-								<li>Item 1</li>
-								<li>Item 2</li>
-								<li>Item 3</li>
-							</ul>
-						</div>
-					</div>
+					<h2>Feature Test</h2>
 
-					<dl>
-						<dt>Definition List</dt>
-						<dd>Encloses a list of pairs of terms and descriptions. Common uses for this element are to implement a glossary or to display metadata (a list of key-value pairs).</dd>
-					</dl>
+					<p>When a browser supports <code>@font-face</code> and pseudo selectors, the <code>feature-test.js</code> file adds the <code>.font-face</code> class to the <code>&lt;html&gt;</code> element. You can hook into this class in your CSS to display fallback text and avoid weird characters on non-supporting browsers.</p>
 
-					<pre><code class="language-markup">Ordered
-&lt;ol&gt;
-	&lt;li&gt;Item 1&lt;/li&gt;
-	&lt;li&gt;Item 2&lt;/li&gt;
-	&lt;li&gt;Item 3&lt;/li&gt;
-&lt;/ol&gt;
+					<h2>Icon Font Starter</h2>
 
-Unordered
-&lt;ul&gt;
-	&lt;li&gt;Item 1&lt;/li&gt;
-	&lt;li&gt;Item 2&lt;/li&gt;
-	&lt;li&gt;Item 3&lt;/li&gt;
-&lt;/ul&gt;
+					<p>The Sass version of Kraken also includes a placeholder file, <code>_icons.scss</code>, for working with icon fonts. This file includes:</p>
 
-Unstyled
-&lt;ul class="list-unstyled"&gt;
-	&lt;li&gt;Item 1&lt;/li&gt;
-	&lt;li&gt;Item 2&lt;/li&gt;
-	&lt;li&gt;Item 3&lt;/li&gt;
-&lt;/ul&gt;
+					<ul>
+						<li>A Sass mixin for including fonts with <code>@font-face</code>.</li>
+						<li>Starter classes&mdash;with <code>.font-face</code> prefix&mdash;for including icons in your markup.</li>
+						<li>A class for fallback text for non-supporting browsers and screenreaders.</li>
+					</ul>
 
-&lt;dl&gt;
-	&lt;dt&gt;Definition List&lt;/dt&gt;
-	&lt;dd&gt;Encloses a list of pairs of terms and descriptions. Common uses for this element are to implement a glossary or to display metadata (a list of key-value pairs).&lt;/dd&gt;
-&lt;/dl&gt;</code></pre>
+<pre><code class="language-css">&lt;a href="http://twitter.com/ChrisFerdinandi"&gt;
+	&lt;span class="icon-fallback-text"&gt;Twitter&lt;/span&gt;
+	&lt;i class="icon-twitter"&gt;&lt;/i&gt;
+&lt;/a&gt;</code></pre>
 
-
-					<p><span class="label">Keep in mind...</span> For semantic reasons, <code>.list-unstyled</code> should only be applied to unordered lists.</p>
+					<p class="text-center"><a href="http://gomakethings.com/icon-fonts/">Learn more about working with icon fonts &rarr;</a></p>
 
 				</div>
 			</div>
