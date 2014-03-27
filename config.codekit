@@ -98,6 +98,14 @@
 		"outputAbbreviatedPath": "\/headings.html",
 		"outputPathIsSetByUser": 0
 		},
+	"\/_kit\/icons.kit": {
+		"fileType": 2048,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/_kit\/icons.kit",
+		"outputAbbreviatedPath": "\/icons.html",
+		"outputPathIsSetByUser": 0
+		},
 	"\/_kit\/index.kit": {
 		"fileType": 2048,
 		"ignore": 0,
@@ -551,6 +559,14 @@
 		"ignore": 1,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/headings.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsSetByUser": 0
+		},
+	"\/icons.html": {
+		"fileType": 8192,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/icons.html",
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsSetByUser": 0
 		},
