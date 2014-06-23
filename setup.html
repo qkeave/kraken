@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -29,6 +30,7 @@
 	</head>
 
 <body>
+
 	<section class="space-bottom bg">
 	<article class="container">
 
@@ -37,6 +39,7 @@
 
 	</article>
 </section>
+
 	<section class="space-bottom">
 		<article class="container">
 
@@ -45,13 +48,13 @@
 
 					<h1 class="text-center">Setup</h1>
 
-					<p>Kraken is <a href="http://sass-lang.com/">powered by Sass</a>, an extension of CSS that adds powerful features like variables and functions and makes customizing Kraken a lot easier. If you don't use Sass, that's ok. Kraken comes with compiled vanilla CSS, too.</p>
+					<p>Kraken is built with <a href="http://gulpjs.com/">gulp.js</a> and <a href="http://sass-lang.com/">powered by Sass</a>, an extension of CSS that adds powerful features like variables and functions and makes customizing Kraken a lot easier. If you don't use Gulp or Sass, that's ok. Kraken comes with compiled vanilla CSS and JS, too.</p>
 
 					<ul>
-						<li><a class="scroll" href="#structure">What's Included</a></li>
-						<li><a class="scroll" href="#sass">Sass</a></li>
-						<li><a class="scroll" href="#css">Vanilla CSS</a></li>
-						<li><a class="scroll" href="#html">HTML Template</a></li>
+						<li><a data-scroll href="#structure">What's Included</a></li>
+						<li><a data-scroll href="#sass">Sass</a></li>
+						<li><a data-scroll href="#css">Vanilla CSS</a></li>
+						<li><a data-scroll href="#html">HTML Template</a></li>
 					</ul>
 
 					<hr>
@@ -59,33 +62,57 @@
 
 					<h2 id="structure">What's Included</h2>
 
-					<p>Kraken includes the following folders and files.</p>
+					<p>Compiled and production-ready code can be found in the <code>dist</code> directory. The <code>src</code> directory contains development code. Unit tests are located in the <code>test</code> directory.</p>
 
 <pre>kraken/
-|--- css/
-|    |--- kraken.css
-|--- fonts/ (placeholder for an icon font)
-|--- img/ (placeholder for image files)
-|--- js/
-|    |--- feature-test.js
-|    |--- scripts.js (placeholder for scripts)
-|--- sass/
-|    |--- components/
-|    |    |--- _buttons.scss
-|    |    |--- _code.scss
-|    |    |--- _forms.scss
-|    |    |--- _grid.scss
-|    |    |--- _icons.scss
-|    |    |--- _overrides.scss
-|    |    |--- _print.scss
-|    |    |--- _reset.scss
-|    |    |--- _typography.scss
-|    |--- _config.scss
-|    |--- _mixins.scss
-|    |--- kraken.scss
-|--- index.html
-|--- template.html
-|--- readme.md</pre>
+|—— dist/
+|   |—— css/
+|   |   |—— kraken.css
+|   |   |—— kraken.min.css
+|   |—— fonts/
+|   |—— img/
+|   |—— js/
+|   |   |—— feature-test.js
+|   |   |—— feature-test.min.js
+|   |   |—— html5.js
+|   |   |—— html5.min.js
+|   |   |—— kraken.js
+|   |   |—— kraken.min.js
+|—— src/
+|   |—— js/
+|   |   |—— feature-test.js
+|   |   |—— html5.js
+|   |   |—— kraken.js
+|   |—— sass/
+|   |   |—— components/
+|   |   |   |—— _buttons.scss
+|   |   |   |—— _code.scss
+|   |   |   |—— _forms.scss
+|   |   |   |—— _grid.scss
+|   |   |   |—— _icons.scss
+|   |   |   |—— _overrides.scss
+|   |   |   |—— _print.scss
+|   |   |   |—— _reset.scss
+|   |   |   |—— _typography.scss
+|   |   |—— _config.scss
+|   |   |—— _mixins.scss
+|   |   |—— kraken.scss
+|   |—— static/
+|   |   |—— fonts/
+|   |   |—— img/
+|—— test/
+|   |—— coverage/
+|   |   |—— various files
+|   |—— results/
+|   |   |—— unit-tests.html
+|   |—— spec/
+|   |   |—— spec-myplugin.js
+|—— .travis.yml
+|—— README.md
+|—— gulpfile.js
+|—— index.html
+|—— package.json
+|—— template.html</pre>
 
 				<hr>
 
@@ -137,13 +164,12 @@ $container-max: 80em;</code></pre>
 					<p>The <code>_mixins.scss</code> file contains just a handful of mixins and functions to speed up development.</p>
 
 					<ul>
-						<li><code>prefixer</code> makes it easy to add vendor prefixes.</li>
 						<li><code>font-face</code> adds the <code>@font-face</code> property.</li>
 						<li><code>strip-unit</code> removes units (px, em, etc.) from numbers.</li>
 						<li><code>calc-em</code> converts pixels to ems.</li>
 					</ul>
 
-					<p><code>prefixer</code> and <code>font-face</code> were forked from <a href="http://bourbon.io/">Bourbon</a>, the world's best Sass library.</p>
+					<p><code>font-face</code> was forked from <a href="http://bourbon.io/">Bourbon</a>, the world's best Sass library.</p>
 
 
 					<h3>Components</h3>
@@ -215,29 +241,19 @@ $container-max: 80em;</code></pre>
 	&lt;!-- Mobile Screen Resizing --&gt;
 	&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
 
-	&lt;!-- Favicon --&gt;
-	&lt;link rel="shortcut icon" type="image/ico" href="img/favicon.ico"&gt;
-
-	&lt;!-- Apple Touch Icons --&gt;
+	&lt;!-- Icons: place in the root directory --&gt;
 	&lt;!-- https://github.com/audreyr/favicon-cheat-sheet --&gt;
-	&lt;link rel="apple-touch-icon" sizes="152x152" href="img/apple-touch-icon-152.png"&gt;
-	&lt;link rel="apple-touch-icon" sizes="144x144" href="img/apple-touch-icon-144.png"&gt;
-	&lt;link rel="apple-touch-icon" sizes="120x120" href="img/apple-touch-icon-120.png"&gt;
-	&lt;link rel="apple-touch-icon" sizes="114x114" href="img/apple-touch-icon-114.png"&gt;
-	&lt;link rel="apple-touch-icon" sizes="72x72" href="img/apple-touch-icon-72.png"&gt;
-	&lt;link rel="apple-touch-icon" href="img/apple-touch-icon-57.png"&gt;
 
-	&lt;!-- MS Homescreen Icons --&gt;
-	&lt;meta name="msapplication-TileColor" content="#0088cc"&gt;
-	&lt;meta name="msapplication-TileImage" content="img/ms-touch-icon.png"&gt;
-
-	&lt;!-- stylesheet --&gt;
-	&lt;link rel="stylesheet" href="css/kraken.css" type="text/css"&gt;
+	&lt;!-- feature test --&gt;
+	&lt;script src="dist/js/feature-test.js"&gt;&lt;/script&gt;
 
 	&lt;!-- HTML5 Shim for IE 6-8 --&gt;
 	&lt;!--[if lt IE 9]&gt;
-	  &lt;script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"&gt;&lt;/script&gt;
+	  &lt;script src="dist/js/html5.js"&gt;&lt;/script&gt;
 	&lt;![endif]--&gt;
+
+	&lt;!-- stylesheet --&gt;
+	&lt;link rel="stylesheet" href="dist/css/kraken.css" type="text/css"&gt;
   &lt;/head&gt;
 
   &lt;body&gt;
@@ -260,15 +276,17 @@ $container-max: 80em;</code></pre>
 
 	&lt;!-- Javascript --&gt;
 	&lt;!-- In the footer for better performance --&gt;
-	&lt;script src="js/kraken.js"&gt;&lt;/script&gt;
+	&lt;script src="dist/js/kraken.js"&gt;&lt;/script&gt;
 
 	&lt;!-- Google Analytics: change UA-XXXXX-X to be your site's ID. --&gt;
 	&lt;!-- (Via HTML5 Boilerplate: http://html5boilerplate.com/) --&gt;
 	&lt;script&gt;
-		var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
-		(function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
-		g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
-		s.parentNode.insertBefore(g,s)}(document,'script'));
+		(function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+		function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+		e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+		e.src='//www.google-analytics.com/analytics.js';
+		r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+		ga('create','UA-XXXXX-X');ga('send','pageview');
 	&lt;/script&gt;
 
   &lt;/body&gt;
@@ -334,13 +352,14 @@ $container-max: 80em;</code></pre>
 			<li><a href="icons.html">Icons</a></li>
 			<li><a href="overrides.html">Alignment, Spacing &amp; Visibility</a></li>
 			<li><a href="addons.html">Add-Ons</a></li>
-			<li><a href="browsers.html">Browser Compatability</a></li>
+			<li><a href="browsers.html">Browser Compatibility</a></li>
 			<li><a href="support.html">Support</a></li>
 		</ol>
 	</div>
 </div>
 
 <p class="text-small space-top text-center"><a href="archive/v2/">Looking for Kraken 2 documentation?</a></p>
+
 
 		</article>
 	</section>
