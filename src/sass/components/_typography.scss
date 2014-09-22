@@ -3,6 +3,11 @@
  * Sets font styles for entire site
  */
 
+html{
+	font-smoothing: subpixel-antialiased;
+	text-rendering: optimizeLegibility;
+}
+
 body {
 	font-family: $font-primary;
 	font-size: $font-base;
