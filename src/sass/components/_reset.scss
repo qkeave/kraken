@@ -135,3 +135,12 @@ a:hover,
 a:active {
 	outline: 0;
 }
+
+/**
+ * Mobile OS Smooth Scrolling 
+ */
+ 
+html, body{
+	-webkit-overflow-scrolling: touch;
+	overflow-scrolling: touch;
+}

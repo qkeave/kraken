@@ -53,7 +53,33 @@ p {
 .text-muted {
 	color: $color-gray-dark;
 }
-
+.text-primary{
+ color: $color-primary;
+}
+.text-black{
+ color: $color-black;
+}
+.text-white{
+ color: $color-white;
+}
+.text-success{
+ color: $color-success;
+}
+.text-danger{
+ color: $color-danger;
+}
+.text-warning{
+ color: $color-warning;
+}
+.text-code{
+ color: $color-code;
+}
+.text-darkgrey{
+ color: $color-gray-dark;
+}
+.text-lightgrey{
+ color: $color-gray-light;
+}
 
 /**
  * Hyperlink styling
@@ -253,3 +279,4 @@ q:after {
 	content: '';
 	content: none;
 }
+
